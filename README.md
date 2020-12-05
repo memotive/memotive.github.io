@@ -1,2 +1,3 @@
-# memotive.github.io
-public static website
+# Memotive Public Static Website
+
+https://memotive.github.io
