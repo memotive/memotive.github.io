@@ -1,3 +1,3 @@
-## Kill. Love. Flex.
+## Kiss. Love. Flex.
 
 ### by Memotive, 2020.
