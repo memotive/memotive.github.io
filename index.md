@@ -1,3 +1,3 @@
 ## Kiss. Love. Flex.
 
-### by Memotive, 2020.
+### by {{ "Memotive" | downcase }}, 2020.
