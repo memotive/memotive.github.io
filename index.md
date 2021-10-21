@@ -4,4 +4,4 @@ title: Home
 ---
 ## Kiss. Love. Flex.
 
-### by Memotive, 2020.
+### by Memotive, 2021.
