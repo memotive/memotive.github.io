@@ -24,8 +24,9 @@
         e.stopPropagation();
         console.log('loading...');
         const id = $('id').value;
+        const size = Math.min(Math.min(window.innerWidth - 20, window.innerHeight - 100), 400);
         if (id.match(/^[1-5]-[1-8]$/)) {
-          $('lab').innerHTML = `<img src="labs/lab-${id}.png" alt="${id}">`;
+          $('lab').innerHTML = `<img src="labs/lab-${id}.png" width="${size}" height="${size}" alt="${id}">`;
         } else {
           $('lab').innerHTML = '';
         }
