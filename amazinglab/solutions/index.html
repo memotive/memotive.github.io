@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A mazing Lab Game Solutions">
+  <title>A mazing Lab - Solutions</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #id {
+      outline:none;
+    }
+  </style>
+  <script>
+    "use strict";
+    (function (document) {
+      const $ = (id) => document.getElementById(id);
+      function get(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('loading...');
+        const id = $('id').value;
+        if (id.match(/^[1-5]-[1-8]$/)) {
+          $('lab').innerHTML = `<img src="labs/lab-${id}.png" alt="${id}">`;
+        } else {
+          $('lab').innerHTML = '';
+        }
+      };
+      document.addEventListener('DOMContentLoaded', function (event) {
+        $('id').focus();
+        $('id').addEventListener('input', get, false);
+      });
+    }(document));    
+  </script>
+
+</head>
+
+<body>
+  <h1>A mazing Lab</h1>
+  <label for="id">Lab</label>
+  <input type="text" id="id" size="3" maxlength="3">
+  <div id="lab"></div>
+</body>
+
+</html>
