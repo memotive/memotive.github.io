@@ -25,7 +25,7 @@
         console.log('loading...');
         const id = $('id').value;
         const size = Math.min(Math.min(window.innerWidth - 20, window.innerHeight - 100), 400);
-        if (id.match(/^[A-E][1-8]$/)) {
+        if (id.match(/^[A-Ea-e][1-8]$/)) {
           $('lab').innerHTML = `<img src="labs/lab-${id}.png" width="${size}" height="${size}" alt="${id}">`;
         } else {
           $('lab').innerHTML = '';
@@ -43,7 +43,7 @@
 <body>
   <h1>A mazing Lab</h1>
   <label for="id">Lab</label>
-  <input type="text" id="id" size="3" maxlength="3">
+  <input type="text" id="id" size="3" maxlength="3" oninput="this.value=this.value.toUpperCase()">
   <div id="lab"></div>
 </body>
 
