@@ -15,7 +15,6 @@
       function setLab(e) {
         if (e) e.preventDefault();
         const lab = $('level').value + $('no').value;
-        // const size = Math.min(Math.min(window.innerWidth - 20, window.innerHeight - 100), 400);
         const size = Math.min(window.innerWidth - 20, window.innerHeight - 200);
         if (lab.match(/^[A-E][1-8]$/)) {
           $('img').src = `labs/svg/lab-${lab}.svg`;
@@ -62,7 +61,7 @@
     </select>
   </div>
   <div id="lab" class="flex justify-center">
-    <img id="img" src="" width="400" height="400" alt=""lab>
+    <img id="img" src="" width="0" height="0" alt="lab">
   </div>
   <div class="text-sm">Designed with <span class="text-2xl text-red-500">&hearts;</span> by Memotive, 2022</div>
 </body>
