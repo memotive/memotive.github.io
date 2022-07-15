@@ -16,7 +16,7 @@
         if (e) e.preventDefault();
         const lab = $('level').value + $('no').value;
         // const size = Math.min(Math.min(window.innerWidth - 20, window.innerHeight - 100), 400);
-        const size = Math.min(window.innerWidth - 0, window.innerHeight - 200);
+        const size = Math.min(window.innerWidth - 20, window.innerHeight - 200);
         if (lab.match(/^[A-E][1-8]$/)) {
           $('img').src = `labs/svg/lab-${lab}.svg`;
           $('img').width = size;
@@ -33,7 +33,7 @@
       document.addEventListener('DOMContentLoaded', (e) => {
         $('level').addEventListener('change', setLab, false);
         $('no').addEventListener('change', setLab, false);
-        setLab();
+        setLab(e);
       });
     }(document));    
   </script>
