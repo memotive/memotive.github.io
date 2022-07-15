@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" hidden>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -7,55 +7,46 @@
   <meta name="description" content="A mazing Lab Game Solutions"> 
   <link rel="icon" href="favicon.ico">
   <title>A mazing Lab - Solutions</title>
-  <script type="module" src="https://cdn.skypack.dev/twind/shim"></script>
+  <link rel="stylesheet" href="style.css">  
   <script>
     "use strict";
     (function (document) {
       const $ = (id) => document.getElementById(id);
-      const labs = {};
-      async function preload() {
-        let levels = 'ABCDE';
-        for (let l = 0; l < levels.length; l++) {
-          let level = levels[l];
-          for (let i = 1; i < 9; i++) {
-            let lab = level + i;
-            labs[lab] = new Image();
-            labs[lab].src = `labs/lab-${lab}.png`;
-          }
-        }
-      }      
       function setLab(e) {
         if (e) e.preventDefault();
         const lab = $('level').value + $('no').value;
         const size = Math.min(Math.min(window.innerWidth - 20, window.innerHeight - 100), 400);
         if (lab.match(/^[A-E][1-8]$/)) {
-          $('lab').innerHTML = `<img src="labs/lab-${lab}.png" width="${size}" height="${size}" alt="${lab}">`;
+          $('img').src = `labs/svg/lab-${lab}.svg`;
+          $('img').width = size;
+          $('img').height = size;
+          $('img').alt = `lab-${lab}`;
         } else {
-          $('lab').innerHTML = '';
+          $('img').src = '';
+          $('img').alt = '';
         }
       };
-      document.addEventListener('DOMContentLoaded', function (event) {
+      document.addEventListener('DOMContentLoaded', (e) => {
         $('level').addEventListener('change', setLab, false);
         $('no').addEventListener('change', setLab, false);
-        preload();
         setLab();
       });
     }(document));    
   </script>
 </head>
 
-<body class="text-center bg-yellow-100">
-  <h1 class="mt-4 text-3xl text-yellow-900">A mazing Lab</h1>
-  <h2 class="text-2xl text-yellow-900">Solutions</h1>
+<body class="font-sans text-center bg-amber-100">
+  <h1 class="m-2 text-4xl">A mazing Lab</h1>
+  <h2 class="m-2 text-2xl">Solutions</h1>
   <div>
-    <select name="level" id="level" class="m-2 p-1 text-xl border(& solid yellow-900) bg(yellow-100) rounded outline-none">
+    <select name="level" id="level" class="m-2 p-1 text-xl border border-solid border-black bg-amber-100 rounded outline-none">
       <option value="A">A</option>
       <option value="B">B</option>
       <option value="C">C</option>
       <option value="D">D</option>
       <option value="E">E</option>
     </select>
-    <select name="no" id="no" class="p-1 text-xl border(& solid yellow-900) bg(yellow-100) rounded outline-none">
+    <select name="no" id="no" class="p-1 text-xl border border-solid border-black bg-amber-100 rounded outline-none">
       <option value="1">1</option>
       <option value="2">2</option>
       <option value="3">3</option>
@@ -66,7 +57,10 @@
       <option value="8">8</option>
     </select>
   </div>
-  <div id="lab" class="flex justify-center"></div>
+  <div id="lab" class="flex justify-center">
+    <img id="img" src="" width="400" height="400" alt=""lab>
+  </div>
+  <div class="text-sm">Designed with <span class="text-2xl text-red-500">&hearts;</span> by Memotive, 2022</div>
 </body>
 
 </html>
