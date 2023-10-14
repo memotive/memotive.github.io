@@ -2,6 +2,6 @@
 layout: default
 title: Home
 ---
-## Kiss. Love. Flex.
+## Peace. Love. Music.
 
-### by Memotive, 2022.
+### by Memotive, 2023.
