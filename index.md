@@ -4,4 +4,4 @@ title: Home
 ---
 ## Peace. Love. Music.
 
-### by Memotive, 2023.
+### by Memotive, 2024.
