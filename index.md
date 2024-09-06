@@ -6,6 +6,6 @@ title: Home
 
 Peacefully create web apps with Love for Music.
 
-Contact at memotive [at] gmail [dot] com
+Contact memotive [at] gmail [dot] com
 
 Memotive, 2024.
