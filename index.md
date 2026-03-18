@@ -4,8 +4,8 @@ title: Home
 ---
 ## Peace. Love. Music.
 
-Peacefully create web apps with Love for Music.
+Peacefully create web apps with Love and Music.
 
 Contact memotive [at] gmail [dot] com
 
-Memotive, 2025.
+Memotive, 2026.
